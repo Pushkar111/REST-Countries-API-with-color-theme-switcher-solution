@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts: Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/country.css">
+
+    <!-- CUSTOM JS -->
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/country.js" defer></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <nav>
+            <div class="nav-title">
+                <h1>Where in the world?</h1>
+            </div>
+            <div class="nav-theme-mode">
+                <svg class="moon mode-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.5" width="20" height="20" viewBox="0 0 24 24">
+                    <defs></defs>
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+                &nbsp;&nbsp;
+                <span>Dark Mode</span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- main section -->
+    <main>
+        <section class="main-content">
+
+            <div class="back-container">
+                <button type="button" onclick="history.back()">
+                    <i class="fa-solid fa-arrow-left-long back-icon"></i>
+                    <!-- <img src="../assets/icons/arrow-back-outline.svg" alt="back-icon"> -->
+                    <span>Back</span>
+                </button>
+            </div>
+
+            <!-- COMMON CARD DESIGN -->
+            <!-- <div class="country-container">
+                <div class="country-flag">
+                    <img src="https://flagcdn.com/gs.svg" alt="country-flag">
+                </div>
+                <div class="country-details">
+                    <h2 class="country-name">South Georgia and the South Sandwich Islands</h2>
+                    <div class="country-data">
+                        <div class="country-info-left">
+                            <p><strong>Native Name:</strong> South Georgia and the South Sandwich Islands</p>
+                            <p><strong>Population:</strong> 30</p>
+                            <p><strong>Region:</strong> Americas</p>
+                            <p><strong>Sub Region:</strong> South America</p>
+                            <p><strong>Capital:</strong> Stanley</p>
+                        </div>
+                        <div class="country-info-right">
+                            <p><strong>Top Level Domain:</strong> .gs</p>
+                            <p><strong>Currencies:</strong> Pound sterling</p>
+                            <p><strong>Languages:</strong> English</p>
+                        </div>
+                    </div>
+                    <div class="country-borders">
+                        <p><strong>Border Countries:</strong></p>
+                        <div class="border-countries">
+                            <a href="">Argentina</a>
+                            <a href="">Brazil</a>
+                            <a href="">Chile</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- FETCHING FROM API -->
+        </section>
+    </main>
+
+</body>
+
+</html>
