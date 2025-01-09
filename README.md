@@ -44,7 +44,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Pushkar111/REST-Countries-API-with-color-theme-switcher-solution]
+- Solution URL: [Github](https://github.com/Pushkar111/REST-Countries-API-with-color-theme-switcher-solution)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 
