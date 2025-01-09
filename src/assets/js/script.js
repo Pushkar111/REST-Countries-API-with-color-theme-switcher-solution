@@ -7,7 +7,7 @@ fetch("https://restcountries.com/v3.1/all")
     data.forEach((country) => {
         // console.log(country);
         const countryCard = document.createElement("a");
-        countryCard.href = `components/country.html?name=${country.name.common}`;
+        countryCard.href = `src/components/country.html?name=${country.name.common}`;
         countryCard.classList.add("country-card");
         countryCard.innerHTML = `
                 <div class="country-flag">
