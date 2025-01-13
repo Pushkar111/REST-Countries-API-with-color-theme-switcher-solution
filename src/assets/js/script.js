@@ -1,9 +1,32 @@
 // creating cards dynamically 
 const countriesContainer = document.querySelector(".countries-container");
+// Function to create skeleton loaders
+function createSkeletonLoaders(count) {
+    for (let i = 0; i < count; i++) {
+        const skeletonCard = document.createElement("div");
+        skeletonCard.classList.add("skeleton-card", "skeleton");
+        skeletonCard.innerHTML = `
+            <div class="skeleton-flag skeleton"></div>
+            <div class="skeleton-info">
+                <div class="skeleton-text skeleton" style="width: 60%;"></div>
+                <div class="skeleton-text skeleton" style="width: 80%;"></div>
+                <div class="skeleton-text skeleton" style="width: 40%;"></div>
+                <div class="skeleton-text skeleton" style="width: 70%;"></div>
+            </div>
+        `;
+        countriesContainer.appendChild(skeletonCard);
+    }
+}
+
+// Show skeleton loaders
+createSkeletonLoaders(12);
 
 fetch("https://restcountries.com/v3.1/all")
 .then(response => response.json())
 .then(data => {
+    // Remove skeleton loaders
+    countriesContainer.innerHTML = "";
+
     data.forEach((country) => {
         // console.log(country);
         const countryCard = document.createElement("a");
