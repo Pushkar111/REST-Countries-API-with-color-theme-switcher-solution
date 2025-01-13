@@ -55,18 +55,24 @@ darkModeIcon.addEventListener("click", () => {
 
 // Search
 const searchInput = document.querySelector("body > main > section > div.search-filter-container > div.search-container > div > input");
+
+let debounceTimeout;
 searchInput.addEventListener("input", () => {
-    const searchValue = searchInput.value.toLowerCase();
-    const countryCards = document.querySelectorAll(".country-card");
-    countryCards.forEach((countryCard) => {
-        const countryName = countryCard.querySelector(".country-name").textContent.toLowerCase();
-        if (countryName.includes(searchValue)) {
-            countryCard.style.display = "block";
-        } else {
-            countryCard.style.display = "none";
-        }
-    });
-})
+    console.log(searchInput.value);
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+        const searchValue = searchInput.value.toLowerCase();
+        const countryCards = document.querySelectorAll(".country-card");
+        countryCards.forEach((countryCard) => {
+            const countryName = countryCard.querySelector(".country-name").textContent.toLowerCase();
+            if (countryName.includes(searchValue)) {
+                countryCard.style.display = "block";
+            } else {
+                countryCard.style.display = "none";
+            }
+        });
+    }, 300); // Adjust the debounce delay as needed
+});
 
 
 // Filter by Region
